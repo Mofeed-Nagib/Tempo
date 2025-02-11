@@ -1,0 +1,32 @@
+# name: CI-Frontend
+
+# on:
+#   push:
+#     branches: [main]
+#   pull_request:
+#     branches: [main]
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Install modules
+#         run: |
+#           cd frontend
+#           yarn
+#       - name: Run Lint
+#         run: |
+#           cd frontend
+#           yarn lint
+#       - name: Run Prettier
+#         run: |
+#           cd frontend
+#           yarn prettier
+#       - name: Run Tests
+#         run: |
+#           cd frontend
+#           yarn test-frontend:ci
+#         env:
+#           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+#           NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
